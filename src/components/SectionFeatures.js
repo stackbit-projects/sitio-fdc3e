@@ -31,7 +31,9 @@ export default class SectionFeatures extends React.Component {
                     )}
                     <div className="cell block-content">
                       <h3 className="block-title underline">{_.get(feature, 'title', null)}</h3>
-                      <div data-paperform-id="incidenciasruizlizondo"></div><script>(function() {var script = document.createElement('script'); script.src = "https://paperform.co/__embed.min.js"; document.body.appendChild(script); })()</script>
+                      <div className="block-copy">
+                        {markdownify(_.get(feature, 'content', null))}
+                      </div>
                       {_.get(feature, 'actions', null) && (
                       <div className="block-buttons">
                         <CtaButtons {...this.props} actions={_.get(feature, 'actions', null)} />
