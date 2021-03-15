@@ -23,3 +23,4 @@ function handleHeader(scrollPos) {
 }
 
 };
+<script src="https://paperform.co/__embed.min.js"></script>
